@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/Users/gauravkarkhanis/Documents/Development/Senior-Project-App-2019/SeniorProjectApp/readViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:SeniorProjectApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
