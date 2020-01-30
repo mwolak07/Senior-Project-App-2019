@@ -21,6 +21,10 @@ struct MyKeys {
 
 class RootViewController: UIViewController {
     
+    @IBOutlet weak var imageViewExample: UIImageView!
+    
+    @IBOutlet weak var extractedExample: UILabel!
+    
     lazy var takePhotoBarButtonItem = UIBarButtonItem(title: "Take", style: .done, target: self, action: #selector(takePhoto))
     
     lazy var savePhotoBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(savePhoto))
@@ -31,8 +35,6 @@ class RootViewController: UIViewController {
     
     lazy var stripTextBarButtonItem = UIBarButtonItem(title: "Strip", style: .plain, target: self, action: #selector(mLAnalysis))
     
-    var lbl : UILabel = UILabel()
-
     lazy var imagePickerController: UIImagePickerController = {
         let controller = UIImagePickerController()
         controller.delegate = self
@@ -47,6 +49,7 @@ class RootViewController: UIViewController {
         return iv
     }()
     
+    
     let activityIndicator = UIActivityIndicatorView(style: .gray)
 
     override func viewDidLoad() {
@@ -54,11 +57,8 @@ class RootViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupNavigationItem()
         setupViews()
-        
-        lbl.frame = CGRect(x: 100, y: 150, width: 250, height: 250)
-        lbl.numberOfLines = 0
-        
-        self.view.addSubview(lbl)
+    
+        self.view.addSubview(extractedExample)
 
 
     }
@@ -79,25 +79,28 @@ class RootViewController: UIViewController {
     }
     
     @objc func mLAnalysis() {
-        let image: UIImage! = imageView.image
+        var capturedImage: UIImage = imageView.image!
+        capturedImage = capturedImage.withConfiguration(UIImage.Configuration)
+        
+        
+        
+        // Initializing the text recognizer
         let vision = Vision.vision()
         let textRecognizer = vision.onDeviceTextRecognizer()
         
-        let imageUsed = VisionImage(image: image)
-        var resultText: String = ""
-            
-        textRecognizer.process(imageUsed) { (result, error) in
+        // Making the image MLKit readable
+        let image = VisionImage(image: capturedImage)
+        
+        // Text extraction
+        textRecognizer.process(image) {result, error in
             guard error == nil, let result = result else {
-                ///
+                //...
                 return
             }
-            
-            resultText = result.text
-            print("in if")
+            let resultText = result.text
             print(resultText)
+            self.extractedExample.text = resultText
         }
-        print("after if")
-        print(resultText)
     }
 
     @objc fileprivate func takePhoto() {
@@ -116,7 +119,9 @@ class RootViewController: UIViewController {
         // add code here
         activityIndicator.startAnimating()
         
-        guard let image = imageView.image, let data = image.jpegData(compressionQuality: 1.0) else {
+        //guard let image = imageView.image, let data = image.jpegData(compressionQuality: 1.0) else {
+        guard let image = imageView.image, let data = image.jpegData(compressionQuality: 1)
+            else {
             presentAlert(title: "Error", message: "Something went wrong")
             return
         }

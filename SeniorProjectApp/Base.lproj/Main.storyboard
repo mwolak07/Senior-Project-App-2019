@@ -14,10 +14,27 @@
                     <view key="view" contentMode="scaleToFill" id="G2s-0Z-WP1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_7830at100wmeta" translatesAutoresizingMaskIntoConstraints="NO" id="1tM-Pf-q31">
+                                <rect key="frame" x="87" y="295" width="272" height="208"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-5x-KTU">
+                                <rect key="frame" x="80" y="593" width="254" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Eih-Bh-meT"/>
                     </view>
                     <navigationItem key="navigationItem" id="xny-5U-qiT"/>
+                    <connections>
+                        <outlet property="extractedExample" destination="m1L-5x-KTU" id="IyV-dX-JjZ"/>
+                        <outlet property="imageViewExample" destination="1tM-Pf-q31" id="GcH-cq-OFH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yY5-gv-moM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,9 +70,8 @@
                                     <constraint firstItem="40R-w6-OAl" firstAttribute="height" secondItem="xPt-3l-Tad" secondAttribute="height" id="p7t-va-aQ3"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekz-PC-5bS">
-                                <rect key="frame" x="185" y="674" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekz-PC-5bS">
+                                <rect key="frame" x="185" y="667" width="44" height="30"/>
                                 <state key="normal" title="ML Kit"/>
                                 <connections>
                                     <segue destination="319-6M-Eif" kind="show" id="ww7-Wb-LY1"/>
@@ -66,6 +82,7 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mHc-QQ-evD" secondAttribute="bottom" constant="30" id="0de-hq-05u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mHc-QQ-evD" secondAttribute="trailing" constant="30" id="tk3-so-p62"/>
+                            <constraint firstItem="mHc-QQ-evD" firstAttribute="top" secondItem="ekz-PC-5bS" secondAttribute="bottom" constant="15" id="wS8-CK-62n"/>
                             <constraint firstItem="mHc-QQ-evD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="wii-VF-5Fg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -87,14 +104,6 @@
                                 <rect key="frame" x="87" y="84" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NZT-BA-Vja">
-                                <rect key="frame" x="87" y="385" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-Gq-QlY">
                                 <rect key="frame" x="184" y="305" width="2906" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -108,6 +117,13 @@
                                     <action selector="ButtonTapped:" destination="319-6M-Eif" eventType="touchUpInside" id="nxa-2u-cwZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbM-XY-Jdm">
+                                <rect key="frame" x="47" y="459" width="325" height="322"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="z0t-HQ-o0p"/>
@@ -115,7 +131,7 @@
                     <navigationItem key="navigationItem" id="X4d-3P-Q8G"/>
                     <connections>
                         <outlet property="ImageViewExample" destination="CMn-fL-Jd7" id="oPK-R3-lfh"/>
-                        <outlet property="TextViewExample" destination="NZT-BA-Vja" id="DAl-zp-YYA"/>
+                        <outlet property="textExtract" destination="UbM-XY-Jdm" id="Aig-xQ-mOz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hMM-dZ-hrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -363,6 +379,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_7830at100wmeta" width="3024" height="4032"/>
         <image name="receipt_examples_perfect_sm" width="235" height="411"/>
     </resources>
 </document>

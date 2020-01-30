@@ -6,22 +6,25 @@
 //  Copyright © 2020 Gaurav Karkhanis. All rights reserved.
 //
 
-/*import UIKit
+import UIKit
 import Firebase
 
 class mLViewController: UIViewController {
 
     @IBOutlet weak var ImageViewExample: UIImageView!
-    @IBOutlet weak var TextViewExample: UITextView!
+    
+    @IBOutlet weak var textExtract: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addSubview(textExtract)
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func ButtonTapped(_ sender: Any) {
         // Obtain image from camera
-        var capturedImage: UIImage ?= //image
+        let capturedImage: UIImage = ImageViewExample.image!
         
         // Initializing the text recognizer
         let vision = Vision.vision()
@@ -36,9 +39,11 @@ class mLViewController: UIViewController {
                 //...
                 return
             }
-            
             let resultText = result.text
+            print(resultText)
+            self.textExtract.text = resultText
         }
+
     }
     
 
@@ -53,5 +58,5 @@ class mLViewController: UIViewController {
     */
 
 }
-*/
+
 
