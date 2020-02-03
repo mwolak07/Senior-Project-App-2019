@@ -133,7 +133,9 @@ class RootViewController: UIViewController {
                 return
             }
             let resultText = result.text
-            print(resultText)
+            // This function operates on global variabled from CommonData, parsing through the result text
+            // In case of emergency, replace resultText with scraperOutput
+            analyze_text(inputText: resultText)
             self.extractedExample.text = resultText
         }
     }

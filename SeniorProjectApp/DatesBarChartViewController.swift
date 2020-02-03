@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class BarChartViewController: UIViewController {
+class DatesBarChartViewController: UIViewController {
 
     @IBOutlet var barChartView: BarChartView!
     
@@ -24,7 +24,7 @@ class BarChartViewController: UIViewController {
         barChartView.drawGridBackgroundEnabled = true
         barChartView.chartDescription?.text = "Bar Chart View"
         
-        setChart(dataPoints: months, values: spending.map { Double($0) })
+        setChart(dataPoints: dates, values: datesPrices.map { Double($0) })
         // Do any additional setup after loading the view.
     }
     

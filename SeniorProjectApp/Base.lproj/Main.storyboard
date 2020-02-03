@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,20 +13,20 @@
         <!--Root View Controller-->
         <scene sceneID="4co-kL-Xul">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Ibo-yU-SST" customClass="RootViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ibo-yU-SST" customClass="RootViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G2s-0Z-WP1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68A-OS-pbI">
-                                <rect key="frame" x="40" y="666" width="334" height="30"/>
+                                <rect key="frame" x="40" y="686" width="334" height="30"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <segue destination="Out-fp-ZR3" kind="showDetail" id="24g-Ay-tq1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stripped Text" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-5x-KTU">
-                                <rect key="frame" x="80" y="136" width="254" height="480"/>
+                                <rect key="frame" x="80" y="156" width="254" height="480"/>
                                 <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="480" id="WE7-lg-vq9"/>
@@ -36,7 +39,7 @@
                                 <rect key="frame" x="149" y="-7899" width="138" height="8064"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="68A-OS-pbI" firstAttribute="leading" secondItem="Eih-Bh-meT" secondAttribute="leading" constant="40" id="2ND-gx-noj"/>
                             <constraint firstItem="Eih-Bh-meT" firstAttribute="trailing" secondItem="m1L-5x-KTU" secondAttribute="trailing" constant="80" id="CR5-tq-zG8"/>
@@ -58,14 +61,42 @@
             </objects>
             <point key="canvasLocation" x="6311.594202898551" y="-1651.6304347826087"/>
         </scene>
+        <!--Dates Bar Chart View Controller-->
+        <scene sceneID="VDr-bY-NsW">
+            <objects>
+                <viewController storyboardIdentifier="DatesBarChartViewController" id="nFR-As-ObZ" customClass="DatesBarChartViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rD8-sX-hq9" customClass="BarChartView" customModule="SeniorProjectApp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6W-Kv-tez">
+                                <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Jel-Z2-ANi" kind="show" id="hnS-RI-qOI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Prx-Ip-kKK"/>
+                    </view>
+                    <connections>
+                        <outlet property="barChartView" destination="rD8-sX-hq9" id="oRn-G1-UEH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LW9-tU-jzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6312" y="-735"/>
+        </scene>
         <!--Text View Controller-->
         <scene sceneID="RNg-NM-OCh">
             <objects>
                 <viewController id="Out-fp-ZR3" customClass="textViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GRT-1D-a8f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="odp-St-leD"/>
                     </view>
                 </viewController>
@@ -78,7 +109,7 @@
             <objects>
                 <navigationController id="qfQ-DP-qlZ" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pXj-j1-WHv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -92,7 +123,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,13 +182,13 @@
         <!--Sign Up View Controller-->
         <scene sceneID="TzJ-6M-Zh1">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="STR-Yr-ggO" customClass="signUpViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="STR-Yr-ggO" customClass="signUpViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NqQ-Ws-gNR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rlP-92-9Hd">
-                                <rect key="frame" x="40" y="40" width="334" height="400"/>
+                                <rect key="frame" x="40" y="60" width="334" height="400"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjg-G5-6e2">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -192,7 +223,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrX-V6-tgK">
                                         <rect key="frame" x="0.0" y="350" width="334" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -229,13 +260,13 @@
         <!--Login View Controller-->
         <scene sceneID="7KC-qo-28R">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="5rc-Cb-fH5" customClass="loginViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5rc-Cb-fH5" customClass="loginViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H0J-Aq-z8y" customClass="UITableView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Y51-PC-RIH">
-                                <rect key="frame" x="30" y="30" width="354" height="260"/>
+                                <rect key="frame" x="30" y="50" width="354" height="260"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="swI-7X-bbk">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -293,7 +324,7 @@
         <!--Get Started View Controller-->
         <scene sceneID="kSm-ni-NTT">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" modalPresentationStyle="fullScreen" id="cNd-rj-TQy" customClass="getStartedViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="cNd-rj-TQy" customClass="getStartedViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C8T-IX-C67">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,7 +368,7 @@
             <objects>
                 <viewController id="DJD-9r-aBf" customClass="analyticsViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CJq-Wc-fzN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Analytics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s2G-WZ-6N2">
@@ -348,31 +379,31 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3I-0A-80J">
-                                <rect key="frame" x="175" y="261" width="64" height="30"/>
+                                <rect key="frame" x="187" y="261" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Pie Chart"/>
+                                <state key="normal" title="Dates"/>
                                 <connections>
                                     <action selector="didTapOnPieChartButton:" destination="DJD-9r-aBf" eventType="touchUpInside" id="4c3-yp-xAS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsk-Nv-zKO">
-                                <rect key="frame" x="172" y="406" width="71" height="30"/>
+                                <rect key="frame" x="170" y="406" width="75" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Line Chart"/>
+                                <state key="normal" title="Categories"/>
                                 <connections>
                                     <action selector="didTapOnLineChart:" destination="DJD-9r-aBf" eventType="touchUpInside" id="yKz-kr-1I5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpb-Rs-4Sk">
-                                <rect key="frame" x="174" y="555" width="66" height="30"/>
+                                <rect key="frame" x="177" y="555" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Bar Chart"/>
+                                <state key="normal" title="Retailers"/>
                                 <connections>
                                     <action selector="didTapOnBarChart:" destination="DJD-9r-aBf" eventType="touchUpInside" id="QTR-2O-SUp"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Scg-mf-eqJ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="D7o-Z0-yAf"/>
@@ -382,20 +413,61 @@
             </objects>
             <point key="canvasLocation" x="5357" y="-11"/>
         </scene>
-        <!--Line Chart View Controller-->
-        <scene sceneID="mux-Gp-Mt3">
+        <!--Categories Pie Chart View Controller-->
+        <scene sceneID="OOs-RB-ldb">
             <objects>
-                <viewController storyboardIdentifier="LineChartViewController" id="TCc-k1-PAQ" customClass="LineChartViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lmm-WJ-o5y">
+                <viewController storyboardIdentifier="CategoriesPieChartViewController" id="Y9N-QC-1ph" customClass="CategoriesPieChartViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hyj-Kd-TNa" customClass="PieChartView" customModule="Charts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Nne-7x-Uhi"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBc-cj-X9d">
+                                <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Jel-Z2-ANi" kind="show" id="mt7-XS-QDV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Jff-rh-Prt"/>
                     </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="hyj-Kd-TNa" id="U3C-zZ-IkU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0pz-Dg-da5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9lb-W2-2jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6601" y="-11"/>
+            <point key="canvasLocation" x="6312" y="-11"/>
+        </scene>
+        <!--Retailers Pie Chart View Controller-->
+        <scene sceneID="U1g-ky-qzz">
+            <objects>
+                <viewController storyboardIdentifier="RetailersPieChartViewController" id="ciS-iu-ijl" customClass="RetailersPieChartViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="trW-0S-0XD" customClass="PieChartView" customModule="Charts">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBI-8Y-yGx">
+                                <rect key="frame" x="26" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="Jel-Z2-ANi" kind="show" id="xqK-Y9-s0g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="acM-pF-oSU"/>
+                    </view>
+                    <connections>
+                        <outlet property="pieChartView" destination="trW-0S-0XD" id="BNE-K1-Ilc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3e-4H-LHR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6312" y="712"/>
         </scene>
         <!--Item-->
         <scene sceneID="nGr-j7-nza">
@@ -403,7 +475,7 @@
                 <navigationController id="wda-zz-CxY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="At0-Iq-9ui"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ca-WX-rV0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -414,30 +486,12 @@
             </objects>
             <point key="canvasLocation" x="4399" y="-11"/>
         </scene>
-        <!--Pie Chart View Controller-->
-        <scene sceneID="0Lx-PK-KSo">
-            <objects>
-                <viewController storyboardIdentifier="PieChartViewController" id="7gq-SL-FTz" customClass="PieChartViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xk3-d1-OV4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="KgA-0b-MCI"/>
-                    </view>
-                    <connections>
-                        <outlet property="pieChartView" destination="xk3-d1-OV4" id="xsC-sX-3B5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jQh-Yz-Cxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6423" y="-825"/>
-        </scene>
         <!--Item-->
         <scene sceneID="vFG-Jf-qnv">
             <objects>
                 <viewController id="xGi-u7-uBz" customClass="emailViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q4N-9P-JiI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N61-cy-vW3">
@@ -449,7 +503,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DZ0-PB-8o1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="CUL-X7-S2r"/>
@@ -464,11 +518,11 @@
         <!--Item-->
         <scene sceneID="RDF-ag-2g0">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Vgu-Md-uEs" sceneMemberID="viewController">
+                <viewController id="Vgu-Md-uEs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5yM-ev-XqR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zet-r2-DoZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Y8f-Do-CUJ"/>
@@ -480,32 +534,32 @@
         <!--Item 1-->
         <scene sceneID="ghy-ag-5kg">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="ehp-pX-rX3" customClass="cameraTabViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ehp-pX-rX3" customClass="cameraTabViewController" customModule="SeniorProjectApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XdU-9R-Thr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello Gaurav," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIy-RG-QGv">
-                                <rect key="frame" x="20" y="40" width="164" height="34.333333333333343"/>
+                                <rect key="frame" x="20" y="60" width="164" height="34.333333333333343"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can take a picture of a receipt here by pressing the capture button below.  On the directed page:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P70-K5-aWY">
-                                <rect key="frame" x="50" y="124.33333333333331" width="314" height="93"/>
+                                <rect key="frame" x="50" y="144.33333333333334" width="314" height="93"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRR-Kq-oGr">
-                                <rect key="frame" x="20" y="272.33333333333331" width="374" height="255.66666666666669"/>
+                                <rect key="frame" x="20" y="292.33333333333331" width="374" height="255.66666666666669"/>
                                 <string key="text">TAKE Take the picture using the in-built camera.  SAVE Save the picture to your own camera roll.  UPLOAD  Upload your receipt to the online server.  DOWNLOAD Download your image from the server.</string>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKG-Lg-1eA">
-                                <rect key="frame" x="40" y="577" width="334" height="50"/>
+                                <rect key="frame" x="40" y="597" width="334" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="RaL-jo-2N5"/>
                                 </constraints>
@@ -545,7 +599,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="9Mk-3M-V6j">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="Jel-Z2-ANi" sceneMemberID="viewController">
+                <tabBarController id="Jel-Z2-ANi" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="yAf-Dr-zry">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -566,11 +620,11 @@
         <!--Navigation Controller-->
         <scene sceneID="aqC-rO-AHe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="IdB-h5-nWn" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IdB-h5-nWn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="L11-XQ-9hd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sHL-iv-iwI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -586,4 +640,7 @@
     <resources>
         <image name="IMG_7830at100" width="3024" height="4032"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mt7-XS-QDV"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,14 +9,14 @@
 import UIKit
 import Charts
 
-class PieChartViewController: UIViewController {
+class CategoriesPieChartViewController: UIViewController {
 
     @IBOutlet var pieChartView: PieChartView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setChart(dataPoints: months, values: spending.map{ Double($0) })
+        setChart(dataPoints: categories, values: categoriesPrices.map{ Double($0) })
     }
     
     func setChart(dataPoints: [String], values: [Double]) {
