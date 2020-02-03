@@ -16,5 +16,6 @@ pod 'Firebase/MLVisionTextModel'
 pod 'Firebase/Storage'
 pod 'TinyConstraints', '~> 4.0.0'
 pod 'Kingfisher'
+pod 'Charts'
 
 end

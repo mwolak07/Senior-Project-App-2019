@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		23555DCFE3D35672E761265A /* Pods_SeniorProjectApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349A31A264F17BD4902DFE01 /* Pods_SeniorProjectApp.framework */; };
 		7E38580123CDF13C00730D23 /* readViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E38580023CDF13C00730D23 /* readViewController.swift */; };
+		7E6AF48323E7806100E919FF /* emailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6AF48223E7806100E919FF /* emailViewController.swift */; };
+		7E6AF48523E7AE9F00E919FF /* textViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6AF48423E7AE9F00E919FF /* textViewController.swift */; };
+		7E84066623E646AC00E2D861 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84066523E646AC00E2D861 /* signUpViewController.swift */; };
 		7EAA53C3238D94C000EE1AC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA53C2238D94C000EE1AC4 /* AppDelegate.swift */; };
 		7EAA53C5238D94C000EE1AC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA53C4238D94C000EE1AC4 /* ViewController.swift */; };
 		7EAA53C8238D94C000EE1AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EAA53C6238D94C000EE1AC4 /* Main.storyboard */; };
@@ -17,7 +20,17 @@
 		7EAA53D5238D970C00EE1AC4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7EAA53D4238D970C00EE1AC4 /* GoogleService-Info.plist */; };
 		7EAA7D8E23C79645008711CC /* camViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EAA7D8D23C79645008711CC /* camViewController.swift */; };
 		7ED73C3D23D7692B00088417 /* clientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED73C3C23D7692B00088417 /* clientViewController.swift */; };
-		7EF6950F23A9574A00536411 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF6950E23A9574A00536411 /* Constants.swift */; };
+		7ED8D99523E49D39008F5302 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED8D99323E49D39008F5302 /* Constants.swift */; };
+		7ED8D99623E49D39008F5302 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED8D99423E49D39008F5302 /* Utilities.swift */; };
+		7EF8DB1423E74F6800EBF6A7 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB1323E74F6800EBF6A7 /* loginViewController.swift */; };
+		7EF8DB1623E7524100EBF6A7 /* getStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB1523E7524100EBF6A7 /* getStartedViewController.swift */; };
+		7EF8DB1923E75C1800EBF6A7 /* cameraTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB1823E75C1800EBF6A7 /* cameraTabViewController.swift */; };
+		7EF8DB1B23E770DF00EBF6A7 /* analyticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB1A23E770DF00EBF6A7 /* analyticsViewController.swift */; };
+		7EF8DB1E23E7764C00EBF6A7 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB1C23E7764B00EBF6A7 /* CommonData.swift */; };
+		7EF8DB1F23E7764C00EBF6A7 /* ModifyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB1D23E7764C00EBF6A7 /* ModifyData.swift */; };
+		7EF8DB2323E7767200EBF6A7 /* PieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB2023E7767200EBF6A7 /* PieChartViewController.swift */; };
+		7EF8DB2423E7767200EBF6A7 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB2123E7767200EBF6A7 /* LineChartViewController.swift */; };
+		7EF8DB2523E7767200EBF6A7 /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF8DB2223E7767200EBF6A7 /* BarChartViewController.swift */; };
 		7EF983A723A29EE600DDDCC2 /* readViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF983A623A29EE600DDDCC2 /* readViewController.swift */; };
 		7EFB926623CBADCC006CC430 /* CustomAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB926323CBADC9006CC430 /* CustomAlbum.swift */; };
 		7EFB926723CBADCC006CC430 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB926423CBADCA006CC430 /* Error+.swift */; };
@@ -28,6 +41,9 @@
 /* Begin PBXFileReference section */
 		349A31A264F17BD4902DFE01 /* Pods_SeniorProjectApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeniorProjectApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E38580023CDF13C00730D23 /* readViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = readViewController.swift; path = "/Users/gauravkarkhanis/Documents/Development/Senior-Project-App-2019/SeniorProjectApp/readViewController.swift"; sourceTree = "<absolute>"; };
+		7E6AF48223E7806100E919FF /* emailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emailViewController.swift; sourceTree = "<group>"; };
+		7E6AF48423E7AE9F00E919FF /* textViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textViewController.swift; sourceTree = "<group>"; };
+		7E84066523E646AC00E2D861 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
 		7EAA53BF238D94C000EE1AC4 /* SeniorProjectApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeniorProjectApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EAA53C2238D94C000EE1AC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EAA53C4238D94C000EE1AC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +54,17 @@
 		7EAA53D4238D970C00EE1AC4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7EAA7D8D23C79645008711CC /* camViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = camViewController.swift; sourceTree = "<group>"; };
 		7ED73C3C23D7692B00088417 /* clientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clientViewController.swift; sourceTree = "<group>"; };
-		7EF6950E23A9574A00536411 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7ED8D99323E49D39008F5302 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../SeniorProjectApp/SeniorProjectApp2019/Constants.swift; sourceTree = "<group>"; };
+		7ED8D99423E49D39008F5302 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7EF8DB1323E74F6800EBF6A7 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		7EF8DB1523E7524100EBF6A7 /* getStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStartedViewController.swift; sourceTree = "<group>"; };
+		7EF8DB1823E75C1800EBF6A7 /* cameraTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraTabViewController.swift; sourceTree = "<group>"; };
+		7EF8DB1A23E770DF00EBF6A7 /* analyticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = analyticsViewController.swift; sourceTree = "<group>"; };
+		7EF8DB1C23E7764B00EBF6A7 /* CommonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
+		7EF8DB1D23E7764C00EBF6A7 /* ModifyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModifyData.swift; sourceTree = "<group>"; };
+		7EF8DB2023E7767200EBF6A7 /* PieChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartViewController.swift; sourceTree = "<group>"; };
+		7EF8DB2123E7767200EBF6A7 /* LineChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		7EF8DB2223E7767200EBF6A7 /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		7EF983A623A29EE600DDDCC2 /* readViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = readViewController.swift; path = "/Users/gauravkarkhanis/Documents/Development/Senior-Project-App-2019/SeniorProjectApp/readViewController.swift"; sourceTree = "<absolute>"; };
 		7EFB926323CBADC9006CC430 /* CustomAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlbum.swift; sourceTree = "<group>"; };
 		7EFB926423CBADCA006CC430 /* Error+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
@@ -89,24 +115,45 @@
 		7EAA53C1238D94C000EE1AC4 /* SeniorProjectApp */ = {
 			isa = PBXGroup;
 			children = (
+				7EF8DB1723E754E500EBF6A7 /* Signing Up and Logging In */,
 				7EAA53C2238D94C000EE1AC4 /* AppDelegate.swift */,
 				7EF983A623A29EE600DDDCC2 /* readViewController.swift */,
 				7E38580023CDF13C00730D23 /* readViewController.swift */,
-				7EAA53C4238D94C000EE1AC4 /* ViewController.swift */,
 				7EAA53C6238D94C000EE1AC4 /* Main.storyboard */,
+				7E6AF48423E7AE9F00E919FF /* textViewController.swift */,
+				7E6AF48223E7806100E919FF /* emailViewController.swift */,
+				7EF8DB1A23E770DF00EBF6A7 /* analyticsViewController.swift */,
+				7EF8DB1823E75C1800EBF6A7 /* cameraTabViewController.swift */,
+				7EF8DB1523E7524100EBF6A7 /* getStartedViewController.swift */,
 				7EFB926923CCE81D006CC430 /* mLViewController.swift */,
 				7EAA7D8D23C79645008711CC /* camViewController.swift */,
 				7EFB926323CBADC9006CC430 /* CustomAlbum.swift */,
+				7ED8D99323E49D39008F5302 /* Constants.swift */,
+				7EF8DB1C23E7764B00EBF6A7 /* CommonData.swift */,
+				7EF8DB2223E7767200EBF6A7 /* BarChartViewController.swift */,
+				7EF8DB2123E7767200EBF6A7 /* LineChartViewController.swift */,
+				7EF8DB2023E7767200EBF6A7 /* PieChartViewController.swift */,
+				7EF8DB1D23E7764C00EBF6A7 /* ModifyData.swift */,
+				7ED8D99423E49D39008F5302 /* Utilities.swift */,
 				7EFB926423CBADCA006CC430 /* Error+.swift */,
 				7EFB926523CBADCC006CC430 /* RootViewController.swift */,
 				7ED73C3C23D7692B00088417 /* clientViewController.swift */,
-				7EF6950E23A9574A00536411 /* Constants.swift */,
 				7EAA53C9238D94C200EE1AC4 /* Assets.xcassets */,
 				7EAA53CB238D94C200EE1AC4 /* LaunchScreen.storyboard */,
 				7EAA53CE238D94C200EE1AC4 /* Info.plist */,
 				7EAA53D4238D970C00EE1AC4 /* GoogleService-Info.plist */,
 			);
 			path = SeniorProjectApp;
+			sourceTree = "<group>";
+		};
+		7EF8DB1723E754E500EBF6A7 /* Signing Up and Logging In */ = {
+			isa = PBXGroup;
+			children = (
+				7E84066523E646AC00E2D861 /* signUpViewController.swift */,
+				7EF8DB1323E74F6800EBF6A7 /* loginViewController.swift */,
+				7EAA53C4238D94C000EE1AC4 /* ViewController.swift */,
+			);
+			path = "Signing Up and Logging In";
 			sourceTree = "<group>";
 		};
 		8498EED434E3D2CB401780A4 /* Pods */ = {
@@ -252,17 +299,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EF6950F23A9574A00536411 /* Constants.swift in Sources */,
+				7EF8DB1423E74F6800EBF6A7 /* loginViewController.swift in Sources */,
 				7EAA53C5238D94C000EE1AC4 /* ViewController.swift in Sources */,
+				7EF8DB1F23E7764C00EBF6A7 /* ModifyData.swift in Sources */,
 				7E38580123CDF13C00730D23 /* readViewController.swift in Sources */,
 				7EAA7D8E23C79645008711CC /* camViewController.swift in Sources */,
+				7ED8D99623E49D39008F5302 /* Utilities.swift in Sources */,
+				7EF8DB2323E7767200EBF6A7 /* PieChartViewController.swift in Sources */,
 				7ED73C3D23D7692B00088417 /* clientViewController.swift in Sources */,
+				7E84066623E646AC00E2D861 /* signUpViewController.swift in Sources */,
+				7EF8DB1B23E770DF00EBF6A7 /* analyticsViewController.swift in Sources */,
+				7EF8DB1923E75C1800EBF6A7 /* cameraTabViewController.swift in Sources */,
 				7EFB926A23CCE81D006CC430 /* mLViewController.swift in Sources */,
+				7E6AF48323E7806100E919FF /* emailViewController.swift in Sources */,
 				7EFB926723CBADCC006CC430 /* Error+.swift in Sources */,
+				7EF8DB2523E7767200EBF6A7 /* BarChartViewController.swift in Sources */,
+				7E6AF48523E7AE9F00E919FF /* textViewController.swift in Sources */,
 				7EF983A723A29EE600DDDCC2 /* readViewController.swift in Sources */,
 				7EFB926623CBADCC006CC430 /* CustomAlbum.swift in Sources */,
+				7EF8DB1623E7524100EBF6A7 /* getStartedViewController.swift in Sources */,
+				7EF8DB1E23E7764C00EBF6A7 /* CommonData.swift in Sources */,
 				7EFB926823CBADCC006CC430 /* RootViewController.swift in Sources */,
 				7EAA53C3238D94C000EE1AC4 /* AppDelegate.swift in Sources */,
+				7EF8DB2423E7767200EBF6A7 /* LineChartViewController.swift in Sources */,
+				7ED8D99523E49D39008F5302 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

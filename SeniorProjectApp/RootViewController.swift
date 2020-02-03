@@ -21,6 +21,8 @@ struct MyKeys {
 
 class RootViewController: UIViewController {
     
+    @IBOutlet weak var displayLabel: UILabel!
+    
     @IBOutlet weak var imageViewExample: UIImageView!
     
     @IBOutlet weak var extractedExample: UILabel!
@@ -78,10 +80,43 @@ class RootViewController: UIViewController {
         activityIndicator.centerInSuperview()
     }
     
-    @objc func mLAnalysis() {
+    /*@objc func mLAnalysis() {
         var capturedImage: UIImage = imageView.image!
-        capturedImage = capturedImage.withConfiguration(UIImage.Configuration)
         
+        // Initializing the text recognizer
+        let vision = Vision.vision()
+        let textRecognizer = vision.onDeviceTextRecognizer()
+        
+        // Making the image MLKit readable
+        let image = VisionImage(image: capturedImage)
+        
+        // Text extraction
+        textRecognizer.process(image) {result, error in
+            guard error == nil, let result = result else {
+                //...
+                return
+            }
+            let resultText = result.text
+            let str = resultText
+            let filename = self.getDocumentsDirectory().appendingPathComponent("output.txt")
+
+            do {
+                try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+            } catch {
+                // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+            }
+            
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+ */
+    
+    @objc func mLAnalysis() {
+        var capturedImage: UIImage = imageViewExample.image!
         
         
         // Initializing the text recognizer

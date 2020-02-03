@@ -1,14 +1,14 @@
 //
-//  Constants.swift
+//  textViewController.swift
 //  SeniorProjectApp
 //
-//  Created by Gaurav Karkhanis on 12/17/19.
-//  Copyright © 2019 Gaurav Karkhanis. All rights reserved.
+//  Created by Gaurav Karkhanis on 2/2/20.
+//  Copyright © 2020 Gaurav Karkhanis. All rights reserved.
 //
 
 import UIKit
 
-class Constants: UIViewController {
+class textViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
