@@ -1,2 +1,6 @@
 /Pods
 Pods
+.DS_Store
+SeniorProjectApp/.DS_Store
+SeniorProjectApp.xcodeproj/.DS_Store
+SeniorProjectApp.xcworkspace/.DS_Store
